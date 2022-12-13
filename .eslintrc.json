@@ -31,5 +31,24 @@
       "extends": ["plugin:@nrwl/nx/javascript"],
       "rules": {}
     }
-  ]
+  ],
+    // @nrwl/nx/enforce-module-boundaries should already exist within an "overrides" block using `"files": ["*.ts", "*.tsx", "*.js", "*.jsx",]`
+    "@nrwl/nx/enforce-module-boundaries": [
+      "error",
+      {
+        "allow": [],
+        // update depConstraints based on your tags
+        "depConstraints": [
+          {
+            "sourceTag": "scope:projects",
+            "onlyDependOnLibsWithTags": ["scope:my-nest-app"]
+          },
+          {
+            "sourceTag": "scope:my-nest-app",
+            "onlyDependOnLibsWithTags": ["scope:projects"]
+          }
+        ]
+      }
+    ]
+  
 }

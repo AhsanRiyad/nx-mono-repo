@@ -15,9 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@common-services/*": ["apps/my-nest-app/src/*"],
+      "@dcltracker/next-test-lib": ["libs/next-test-lib/src/index.ts"],
       "@dcltracker/projects": ["libs/projects/src/index.ts"],
-      "@my-workspace/my-nest-lib": ["libs/my-nest-lib/src/index.ts"],
-      "@common-services/*": ["apps/my-nest-app/src/*"]
+      "@my-workspace/my-nest-lib": ["libs/my-nest-lib/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,24 +1,24 @@
 {
-  "name": "projects",
+  "name": "next-test-lib",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/projects/src",
+  "sourceRoot": "libs/next-test-lib/src",
   "projectType": "library",
+  "tags": [],
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/projects/**/*.ts"]
+        "lintFilePatterns": ["libs/next-test-lib/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/projects/jest.config.ts",
+        "jestConfig": "libs/next-test-lib/jest.config.ts",
         "passWithNoTests": true
       }
     }
-  },
-  "tags": ["scope:projects"]
+  }
 }
