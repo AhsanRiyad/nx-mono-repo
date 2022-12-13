@@ -17,7 +17,7 @@
     "paths": {
       "@dcltracker/projects": ["libs/projects/src/index.ts"],
       "@my-workspace/my-nest-lib": ["libs/my-nest-lib/src/index.ts"],
-      "@my-workspace/common": ["common/"]
+      "@common-services/*": ["apps/my-nest-app/src/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
