@@ -15,7 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@my-workspace/my-nest-lib": ["libs/my-nest-lib/src/index.ts"]
+      "@dcltracker/projects": ["libs/projects/src/index.ts"],
+      "@my-workspace/my-nest-lib": ["libs/my-nest-lib/src/index.ts"],
+      "@my-workspace/common": ["common/"]
     }
   },
   "exclude": ["node_modules", "tmp"]
