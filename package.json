@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+     "dev": "concurrently -n my-nest-app,dcltracker--watcher  \"nx serve my-nest-app\" \"nx serve dcltracker\" \"nodemon exec ----- --watch\""
   },
   "private": true,
   "dependencies": {
@@ -58,6 +59,7 @@
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1",
     "babel-jest": "28.1.1",
+    "concurrently": "^7.6.0",
     "cypress": "^11.0.0",
     "eslint": "~8.15.0",
     "eslint-config-next": "13.0.0",
